@@ -1,0 +1,19 @@
+<!--Nos permite editar el libro mediante el id-->
+<h1>CELEBRITIES</h1>
+{{#each celebrities}}
+<ul>
+    <a href="celebrities/{{this._id}}">{{this.name}}</a>
+</ul>
+{{/each}}
+
+
+<!--<h2>The best of the best</h2>
+{{#each artist}}
+    <h3><a href="/celebrities/{{this._id}}" >{{this.name}}</a></h3>
+    <form action='celebrities/delete/{{this._id}}' method='post'>
+        <button type="submit" class="delete-button" id="delete-btn" data-id="{{this._id}}">Delete</button>
+    </form>
+{{/each}}
+
+<a href="celebrities/add"><h1>submit artist</h1></a>
+-->
