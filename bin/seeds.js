@@ -2,10 +2,16 @@ const mongoose = require('mongoose');
 const Celebrity = require('../models/Celebrity');
 const Movie = require('../models/Movie');
 
+/* const dbtitle = 'library-project';
+mongoose.connect(`mongodb://localhost/${dbtitle}`, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+ */
+ 
 mongoose.connect('mongodb://localhost/artists', {
   useNewUrlParser: true,
-   useUnifiedTopology: true,
-  reconnectTries: Number.MAX_VALUE
+  useUnifiedTopology: true
 });
 
 Celebrity.collection.drop();
@@ -62,8 +68,10 @@ Movie.create(movies)
 .then((result)=> {
     console.log('movies created')
 }).catch((err) => {
-    console.log('There is an error ${err}')
+    console.log('There is an error ${err}');
 });
 
 
-module.exports = celebrities;
+module.exports = celebrities; 
+
+
